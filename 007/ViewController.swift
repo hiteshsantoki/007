@@ -7,19 +7,38 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet var username: UITextField!
+    @IBOutlet var password: UITextField!
+    @IBOutlet var signbutton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        
+        Alamofire.request("http://192.168.0.105/007_api/api/items").responseJSON { response in
+            if let json = response.result.value {
+                if let jsonResult = json as? Array<Dictionary<String,String>> {
+                    for item in jsonResult
+                    {
+                        let id = item["id"]!
+                        print(id)
+                    }
+                }
+            }
+            
+        }
+}
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+    
 }
 
