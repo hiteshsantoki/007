@@ -20,12 +20,15 @@ class DetailController: UIViewController{
     @IBOutlet var handover: UITextField!
 
     var datadetail: String?
+    var dataarray: String?
     var TableData:Array< String > = Array < String >()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+              }
+    
 
-}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        }

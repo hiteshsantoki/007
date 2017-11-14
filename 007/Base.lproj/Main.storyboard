@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zZd-Yl-Na6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -67,9 +67,6 @@
                                 <state key="normal" title="Sign in..">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="e8y-Gx-vot" kind="show" id="6BR-Fv-Aie"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,12 +91,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="-418"/>
+            <point key="canvasLocation" x="1241" y="-14"/>
         </scene>
-        <!--Found Controller-->
+        <!--View Controller-->
         <scene sceneID="8d3-1i-VK7">
             <objects>
-                <viewController id="e8y-Gx-vot" customClass="FoundController" customModule="_07" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AJp-6i-IJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="TableController" id="e8y-Gx-vot" customClass="ViewController" customModule="_07" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ucW-bc-a3d"/>
                         <viewControllerLayoutGuide type="bottom" id="iL1-Mc-LEj"/>
@@ -119,15 +117,8 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Logout"/>
                                             </button>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="2Tw-DJ-Y3L"/>
-                                            </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="gqm-Vn-Ko8">
-                                            <connections>
-                                                <segue destination="o0T-H6-CEo" kind="show" id="g53-0P-M7b"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="gqm-Vn-Ko8"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -151,20 +142,16 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="e8y-Gx-vot" id="gQf-Z9-rod"/>
-                                    <outlet property="delegate" destination="e8y-Gx-vot" id="WKy-xB-bmh"/>
+                                    <outlet property="dataSource" destination="e8y-Gx-vot" id="9UM-1a-zhV"/>
+                                    <outlet property="delegate" destination="e8y-Gx-vot" id="eKW-96-7sH"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="tableview" destination="H5h-Gl-vkG" id="0te-y2-yzN"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AJp-6i-IJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444" y="-419"/>
+            <point key="canvasLocation" x="1066" y="-690"/>
         </scene>
         <!--Detail Controller-->
         <scene sceneID="kk3-1T-4Sj">
@@ -309,7 +296,7 @@
                                     <navigationItem title="Details" id="yub-Xl-cXs">
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="pDj-QS-kPa">
                                             <connections>
-                                                <segue destination="e8y-Gx-vot" kind="show" id="ioX-6N-P2v"/>
+                                                <segue destination="zZd-Yl-Na6" kind="show" id="GXs-fo-W0i"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="oMn-xy-DH2"/>
@@ -346,13 +333,71 @@
                     <state key="normal" title="Button"/>
                 </button>
             </objects>
-            <point key="canvasLocation" x="1374" y="-419"/>
+            <point key="canvasLocation" x="3527" y="99"/>
+        </scene>
+        <!--Founds-->
+        <scene sceneID="YSs-jp-qI2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbs-C9-tBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="zZd-Yl-Na6" customClass="TableController" customModule="_07" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="33" sectionHeaderHeight="28" sectionFooterHeight="28" id="fat-nl-Sej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="vUn-xI-ANp">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="33" id="Ole-nh-MoW">
+                                <rect key="frame" x="0.0" y="72" width="375" height="33"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ole-nh-MoW" id="yCO-qv-bjR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="o0T-H6-CEo" kind="show" id="ofp-JU-MGf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zZd-Yl-Na6" id="qbq-8h-9Nt"/>
+                            <outlet property="delegate" destination="zZd-Yl-Na6" id="uHy-Pn-8a6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Founds" id="dEk-QI-Hdc">
+                        <barButtonItem key="leftBarButtonItem" title="signout" style="plain" id="IYO-qy-3Oj"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="lfQ-jR-Azo"/>
+                    </navigationItem>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="2778" y="99"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pee-MF-o43">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="16U-Pe-cxw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r16-yq-qYs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zZd-Yl-Na6" kind="relationship" relationship="rootViewController" id="0lA-xQ-qsw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P5x-17-vp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2020" y="99"/>
         </scene>
     </scenes>
     <resources>
         <image name="dark-background-pictures-5803-6067-hd-wallpapers.jpg" width="2880" height="1800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ioX-6N-P2v"/>
+        <segue reference="GXs-fo-W0i"/>
     </inferredMetricsTieBreakers>
 </document>
