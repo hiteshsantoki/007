@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 
 class DetailController: UIViewController{
@@ -20,15 +21,27 @@ class DetailController: UIViewController{
     @IBOutlet var handover: UITextField!
 
     var datadetail: String?
-    var dataarray: String?
-    var TableData:Array< String > = Array < String >()
+    var found : String?
+    var location : String?
+    var date : String?
+    var time : String?
+    var quenty : String?
+    var note : String?
+    var hand_over : String?
+  
     
-    override func viewDidLoad() {
+   override func viewDidLoad() {
         super.viewDidLoad()
-        
-              }
     
-
+                        self.found_name.text = found
+                        self.location_name.text = location
+                        self.date_text.text = date
+                        self.time_text.text = time
+                        self.quentity.text = quenty
+                        self.handover.text = hand_over
+                        self.note_text.text = note
+                        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        }
