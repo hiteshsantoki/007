@@ -19,7 +19,6 @@
 		1D3381981FB46486004C2672 /* _07UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3381971FB46486004C2672 /* _07UITests.swift */; };
 		1D3381A61FB4679F004C2672 /* 007_logo1600.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3381A51FB4679F004C2672 /* 007_logo1600.png */; };
 		1DC5D21D1FBFFC9800E9E226 /* texture_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5D21C1FBFFC9800E9E226 /* texture_back.jpg */; };
-		1DE4F00E1FBABCE300865197 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE4F00D1FBABCE300865197 /* TableController.swift */; };
 		1DE7791F1FB56C1C00312CA8 /* dark-background-pictures-5803-6067-hd-wallpapers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DE7791E1FB56C1C00312CA8 /* dark-background-pictures-5803-6067-hd-wallpapers.jpg */; };
 		1DE779211FB5864D00312CA8 /* add_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DE779201FB5864D00312CA8 /* add_icon1.png */; };
 		1DE779231FB5BAED00312CA8 /* FoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE779221FB5BAED00312CA8 /* FoundController.swift */; };
@@ -131,7 +130,6 @@
 		1D3381991FB46486004C2672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D3381A51FB4679F004C2672 /* 007_logo1600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 007_logo1600.png; sourceTree = "<group>"; };
 		1DC5D21C1FBFFC9800E9E226 /* texture_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_back.jpg; sourceTree = "<group>"; };
-		1DE4F00D1FBABCE300865197 /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		1DE7791E1FB56C1C00312CA8 /* dark-background-pictures-5803-6067-hd-wallpapers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dark-background-pictures-5803-6067-hd-wallpapers.jpg"; sourceTree = "<group>"; };
 		1DE779201FB5864D00312CA8 /* add_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_icon1.png; sourceTree = "<group>"; };
 		1DE779221FB5BAED00312CA8 /* FoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundController.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 				1D3381791FB46485004C2672 /* ViewController.swift */,
 				1DE779241FB5BB1300312CA8 /* DetailController.swift */,
 				1DE779221FB5BAED00312CA8 /* FoundController.swift */,
-				1DE4F00D1FBABCE300865197 /* TableController.swift */,
 				1DE7791E1FB56C1C00312CA8 /* dark-background-pictures-5803-6067-hd-wallpapers.jpg */,
 				1DC5D21C1FBFFC9800E9E226 /* texture_back.jpg */,
 				1DE779201FB5864D00312CA8 /* add_icon1.png */,
@@ -443,7 +440,6 @@
 				1D33817A1FB46485004C2672 /* ViewController.swift in Sources */,
 				1D276F121FBEF53700610F62 /* customTableViewCell.swift in Sources */,
 				1DE779231FB5BAED00312CA8 /* FoundController.swift in Sources */,
-				1DE4F00E1FBABCE300865197 /* TableController.swift in Sources */,
 				1D3381781FB46485004C2672 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
