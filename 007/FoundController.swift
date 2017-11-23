@@ -34,13 +34,22 @@ class FoundController: UIViewController , UITableViewDelegate,UITableViewDataSou
     }
    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
-        if indexPath.row < TableData.count
-        {
-            TableData.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .top)
-            
+            let params = ["id":TableId[indexPath.row]]
+            print(params)
+        
+        let headers = [
+            "Content-Type": "application/x-www-form-urlencoded"
+        ]
+
+       
+        Alamofire.request("http://192.168.0.105/007_api/api/deleteItem", method: .delete, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { response in
+            if indexPath.row < self.TableData.count
+            {
+                self.TableData.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .top)
+            }
         }
-    }
+   }
     override func viewDidLoad() {
     super.viewDidLoad()
         Alamofire.request("http://192.168.0.105/007_api/api/items").responseJSON { response in
@@ -64,11 +73,14 @@ class FoundController: UIViewController , UITableViewDelegate,UITableViewDataSou
         
         if segue.identifier == "passdetails"{
             let TC2 = segue.destination as? DetailController
+            
             let blogIndex = tableview.indexPathForSelectedRow?.row
             for item in self.itemdata
             {
                 if (item["id"] == "\(TableId[blogIndex!])")
                 {
+                    TC2?.id = item["id"]!
+                    TC2?.user_id = item["user_id"]
                     TC2?.found = item["found"]!
                     TC2?.date = item["date"]!
                     TC2?.time = item["time"]!
@@ -76,6 +88,7 @@ class FoundController: UIViewController , UITableViewDelegate,UITableViewDataSou
                     TC2?.hand_over = item["handed_over"]!
                     TC2?.note = item["notes"]!
                     TC2?.location = item["location"]!
+                    
                     
                 }
             }

@@ -23,6 +23,7 @@
 		1DE779211FB5864D00312CA8 /* add_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DE779201FB5864D00312CA8 /* add_icon1.png */; };
 		1DE779231FB5BAED00312CA8 /* FoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE779221FB5BAED00312CA8 /* FoundController.swift */; };
 		1DE779251FB5BB1300312CA8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE779241FB5BB1300312CA8 /* DetailController.swift */; };
+		1DF8224C1FC5A0AE00647977 /* additemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF8224B1FC5A0AE00647977 /* additemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		1DE779201FB5864D00312CA8 /* add_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_icon1.png; sourceTree = "<group>"; };
 		1DE779221FB5BAED00312CA8 /* FoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundController.swift; sourceTree = "<group>"; };
 		1DE779241FB5BB1300312CA8 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		1DF8224B1FC5A0AE00647977 /* additemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = additemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				1D3381791FB46485004C2672 /* ViewController.swift */,
 				1DE779241FB5BB1300312CA8 /* DetailController.swift */,
 				1DE779221FB5BAED00312CA8 /* FoundController.swift */,
+				1DF8224B1FC5A0AE00647977 /* additemController.swift */,
 				1DE7791E1FB56C1C00312CA8 /* dark-background-pictures-5803-6067-hd-wallpapers.jpg */,
 				1DC5D21C1FBFFC9800E9E226 /* texture_back.jpg */,
 				1DE779201FB5864D00312CA8 /* add_icon1.png */,
@@ -440,6 +443,7 @@
 				1D33817A1FB46485004C2672 /* ViewController.swift in Sources */,
 				1D276F121FBEF53700610F62 /* customTableViewCell.swift in Sources */,
 				1DE779231FB5BAED00312CA8 /* FoundController.swift in Sources */,
+				1DF8224C1FC5A0AE00647977 /* additemController.swift in Sources */,
 				1D3381781FB46485004C2672 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,7 +608,7 @@
 				INFOPLIST_FILE = 007/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Cronabit-1.mapview";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cronabit-1.BloodLocator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -619,7 +623,7 @@
 				INFOPLIST_FILE = 007/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Cronabit-1.mapview";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cronabit-1.BloodLocator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
