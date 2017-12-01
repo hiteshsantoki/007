@@ -40,8 +40,6 @@ class FoundController: UIViewController , UITableViewDelegate,UITableViewDataSou
         let headers = [
             "Content-Type": "application/x-www-form-urlencoded"
         ]
-
-       
         Alamofire.request("http://192.168.0.105/007_api/api/deleteItem", method: .delete, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { response in
             if indexPath.row < self.TableData.count
             {

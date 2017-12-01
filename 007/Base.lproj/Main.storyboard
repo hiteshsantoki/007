@@ -55,7 +55,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIP-YT-Ucg">
                                 <rect key="frame" x="123.5" y="389" width="128" height="50"/>
@@ -68,7 +68,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="e8y-Gx-vot" kind="show" id="h7O-zw-l4N"/>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lIE-kA-5v6"/>
+                                    <segue destination="e8y-Gx-vot" kind="show" identifier="signin" id="d06-WA-giU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="242"/>
+            <point key="canvasLocation" x="1860" y="242"/>
         </scene>
         <!--Found Controller-->
         <scene sceneID="8d3-1i-VK7">
@@ -173,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJp-6i-IJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2853.5999999999999" y="241.52923538230885"/>
+            <point key="canvasLocation" x="2607" y="242"/>
         </scene>
         <!--Detail Controller-->
         <scene sceneID="kk3-1T-4Sj">
@@ -193,10 +194,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWg-sA-pUE">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Found Here.." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0IR-nS-T2b">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Found Here.." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0IR-nS-T2b">
                                                 <rect key="frame" x="105" y="18" width="262" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="TrW-X9-N8V"/>
+                                                    <constraint firstAttribute="width" constant="262" id="fws-TH-JGz"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -249,9 +253,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Found :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJg-kR-02A">
-                                                <rect key="frame" x="15" y="18" width="72" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Found :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJg-kR-02A">
+                                                <rect key="frame" x="29.5" y="18" width="57.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -335,16 +338,20 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="603" id="JLL-fi-1wx"/>
                                             <constraint firstAttribute="trailing" secondItem="xGH-rd-29r" secondAttribute="trailing" constant="154" id="NMb-FT-caU"/>
+                                            <constraint firstItem="0IR-nS-T2b" firstAttribute="leading" secondItem="HJg-kR-02A" secondAttribute="trailing" constant="18" id="OMm-cb-fW5"/>
                                             <constraint firstAttribute="bottom" secondItem="xGH-rd-29r" secondAttribute="bottom" constant="169" id="z35-95-VLW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0IR-nS-T2b" secondAttribute="trailing" constant="8" id="0gu-4h-4u3"/>
                                     <constraint firstAttribute="height" constant="603" id="9fE-eX-LtC"/>
                                     <constraint firstItem="WWg-sA-pUE" firstAttribute="centerX" secondItem="PwC-aQ-5Bw" secondAttribute="centerX" id="Eok-tD-rdg"/>
                                     <constraint firstAttribute="trailing" secondItem="WWg-sA-pUE" secondAttribute="trailing" id="Pag-Su-LVE"/>
+                                    <constraint firstItem="0IR-nS-T2b" firstAttribute="top" secondItem="PwC-aQ-5Bw" secondAttribute="top" constant="18" id="UGq-Mh-8wx"/>
                                     <constraint firstAttribute="bottom" secondItem="WWg-sA-pUE" secondAttribute="bottom" id="Xnh-88-uzB"/>
                                     <constraint firstItem="WWg-sA-pUE" firstAttribute="top" secondItem="PwC-aQ-5Bw" secondAttribute="top" id="gSQ-HW-Hmq"/>
+                                    <constraint firstItem="HJg-kR-02A" firstAttribute="top" secondItem="PwC-aQ-5Bw" secondAttribute="top" constant="18" id="iFd-uW-2sy"/>
                                     <constraint firstItem="WWg-sA-pUE" firstAttribute="leading" secondItem="PwC-aQ-5Bw" secondAttribute="leading" id="m3D-IB-8is"/>
                                     <constraint firstAttribute="width" constant="375" id="zeP-xe-umY"/>
                                 </constraints>
@@ -402,7 +409,7 @@
                     <state key="normal" title="Button"/>
                 </button>
             </objects>
-            <point key="canvasLocation" x="3717.5999999999999" y="241.52923538230885"/>
+            <point key="canvasLocation" x="3406" y="242"/>
         </scene>
         <!--Additem Controller-->
         <scene sceneID="VUV-HM-BrD">
@@ -628,13 +635,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmW-OO-5ee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4633" y="242"/>
+            <point key="canvasLocation" x="4151" y="242"/>
         </scene>
     </scenes>
     <resources>
         <image name="dark-background-pictures-5803-6067-hd-wallpapers.jpg" width="2880" height="1800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zTd-8J-CBx"/>
+        <segue reference="d06-WA-giU"/>
     </inferredMetricsTieBreakers>
 </document>
